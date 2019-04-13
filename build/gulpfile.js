@@ -1,11 +1,12 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const $ = require("gulp-load-plugins")();
 const browserSync = require('browser-sync');
 
 const paths = {
   'src': {
     'scss': '../src/assets/scss/*/*.scss',
-    'html': '../src/components/pages/*/*.html'
+    'ejs': ['../src/components/pages/*/*.ejs', '!' + '../src/components/pages/*/_*.ejs']
   },
   'dist': {
     'css': '../dist',
@@ -13,7 +14,7 @@ const paths = {
   }
 };
 
-// Comple scss
+// Compile scss
 gulp.task('scss', done => {
   gulp.src(paths.src.scss)
       .pipe(sass({
@@ -23,9 +24,11 @@ gulp.task('scss', done => {
   done();
 });
 
-// Comple html
-gulp.task('html', done => {
-  gulp.src(paths.src.html)
+// Compile .ejs into .html
+gulp.task('ejs', done => {
+  gulp.src(paths.src.ejs)
+      .pipe($.ejs())
+      .pipe($.rename({ extname: ".html" }))
       .pipe(gulp.dest(paths.dist.html));
   done();
 });
@@ -43,10 +46,10 @@ gulp.task('reload', function () {
 });
 
 gulp.task('watch', done => {
-  gulp.watch(paths.src.html, ['html', 'reload']);
-  gulp.watch(paths.src.scss, ['reload', 'scss']);
+  gulp.watch(paths.src.ejs,   ['reload', 'ejs']);
+  gulp.watch(paths.src.scss,  ['reload', 'scss']);
   done();
 });
 
 gulp.task('default', ['watch', 'server']);
-gulp.task('build', ['html', 'scss']);
+gulp.task('build', ['ejs', 'scss']);
