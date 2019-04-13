@@ -1,0 +1,24 @@
+{
+  "name": "Online-Tutor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maheralayoubi/Online-Tutor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maheralayoubi/Online-Tutor/issues"
+  },
+  "homepage": "https://github.com/maheralayoubi/Online-Tutor#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
