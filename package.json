@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/maheralayoubi/Online-Tutor#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.3",
     "gulp": "^3.9.0",
     "gulp-sass": "^4.0.2"
   }
