@@ -5,3 +5,92 @@
 
 // Components
 @import "./components/base";
+
+.global-header {
+  border-bottom: 1px solid $gray;
+  height: 64px;
+  background-color: $bg-white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+
+  > .logo {
+    margin-right: 20px;
+  }
+
+  > .title {
+    font-size: 28px;
+    color: $gray;
+  }
+}
+
+.global-content {
+  display: flex;
+}
+
+.global-side {
+  width: 280px;
+  height: 100vh;
+  padding: 20px;
+  background-color: $bg-white;
+  border-right: 1px solid $gray;
+
+  > .copyright {
+    text-align: center;
+    display: block;
+  }
+}
+
+.global-main {
+  background-color: $bg-gray;
+  flex: 1;
+}
+
+.my-profile {
+  text-align: center;
+
+  > .name {
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  > .link {
+    font-size: 14px;
+  }
+}
+
+.main-menu {
+  border-top: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+  margin-top: 24px;
+  padding: 24px 0;
+
+  > .item {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  > .item > .link {
+    font-size: 18px;
+  }
+}
+
+.sub-menu {
+  margin: 20px 0;
+
+  > .item {
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  > .item > .link {
+    color: $pink;
+    font-size: 14px;
+  }
+}
