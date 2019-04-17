@@ -1,8 +1,6 @@
-// text, link, border
-$white:           #fff;
-
+// text-color, link-color, border-color
 $black-lighten:   #555;
-$black-light:     #111;
+$black-light:     #1b1b1b;
 $black:           #000;
 
 $gray-lighten:    #f9f9f9;
@@ -11,13 +9,14 @@ $gray:            #ccc;
 $gray-dark:       #aaa;
 
 $pink:            #f00e8a;
+$blue:            #0000ff;
 
 // background-color
+$bg-white:        #fff;
+
 $bg-gray-lighter: #fafafa;
 $bg-gray-light:   #f3f3f3;
 $bg-gray:         #eaeaea;
 $bg-gray-dark:    #eaeaea;
 
-// link
-$primary-link: $pink;
-$secondery-link: $black-light;
+$bg-pink:           $pink;
