@@ -1,0 +1,14 @@
+@import "../../common/variables";
+
+.avatar {
+  height: 112px;
+  width: 112px;
+  border-radius: 25em;
+  object-fit: cover;
+  background-color: $bg-gray-light;
+
+  &.-with-shadow {
+    border: 10px solid $white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  }
+}
