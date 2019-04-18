@@ -1,0 +1,83 @@
+<%
+  // ログイン後のトップページ
+  var title = 'トップ'
+%>
+
+<% include common/_header %>
+
+<header class="global-header">
+  <h1 class="logo">
+    <a href="/pc">
+      <img src="./images/common/logo.png" width="" height="" alt="<%= SITE_NAME %>">
+    </a>
+  </h1>
+  <h2 class="title"><%= title %></h2>
+</header>
+
+<div class="global-content">
+  <div class="global-side">
+
+    <div class="my-profile">
+      <div class="avatar"></div>
+      <div class="name">じろー</div>
+      <a class="link">プロフィールをチェック</a>
+    </div>
+
+    <ul class="main-menu">
+      <li class="item">
+        <a href="/pc/" class="link -current">
+          ホーム
+        </a>
+      </li>
+      <li class="item">
+        <a href="/pc/lessons" class="link">
+          レッスン
+        </a>
+      </li>
+      <li class="item">
+        <a href="/pc/messages.html" class="link">
+          メッセージ
+        </a>
+      </li>
+    </ul>
+
+    <ul class="sub-menu">
+      <li class="item">
+        <a href="" class="link">
+          はじめての方へ
+        </a>
+      </li>
+      <li class="item">
+        <a href="" class="link">
+          ヘルプ
+        </a>
+      </li>
+      <li class="item">
+        <a href="" class="link">
+          利用規約・プライバシーポリシー
+        </a>
+      </li>
+    </ul>
+
+    <small class="copyright">© 2019 Stwu</small>
+  </div>
+
+  <div class="global-main">
+    <div class="inner">
+
+    <div class="profile-list">
+    <% for (var i = 0; i < 30; i++) { %>
+      <div class="profile-item">
+        <div class="avatar -with-shadow"></div>
+        <div class="name">しおん</div>
+        <div class="age">20才</div>
+        <div class="tweet">一言のテキストがここに入ります。２行まで入る。</div>
+      </div>
+    <% } %>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<% include common/_footer %>
