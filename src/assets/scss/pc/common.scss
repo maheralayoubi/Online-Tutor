@@ -163,13 +163,9 @@
 
 .profile-list {
   display: grid;
-  -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(5,1fr);
-  grid-column-gap: 2rem;
-  -webkit-column-gap: 2rem;
-  column-gap: 2rem;
-  grid-row-gap: 3rem;
-  row-gap: 3rem;
+  column-gap: 20px;
+  row-gap: 40px;
   margin: 40px;
 }
 
@@ -187,6 +183,7 @@
   }
 
   > .age {
+    color: $black-lighten;
   }
 
   > .tweet {
@@ -194,5 +191,7 @@
     background-color: $bg-white;
     font-size: 10px;
     padding: 8px;
+    border-radius: 4px;
+    max-height: 48px;
   }
 }
