@@ -36,7 +36,7 @@
 .global-side {
   width: 280px;
   height: 100vh;
-  padding: 20px;
+  padding: 24px 20px;
   background-color: $bg-white;
   border-right: 1px solid $gray;
   flex: 0 0 auto;
@@ -61,6 +61,8 @@
 
   > .avatar {
     margin: 0 auto 12px;
+    width: 112px;
+    height: 112px;
   }
 
   > .name {
