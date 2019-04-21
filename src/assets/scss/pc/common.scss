@@ -19,6 +19,10 @@
     margin-right: 20px;
   }
 
+  > .logo > .link {
+    display: flex; // fill space
+  }
+
   > .title {
     font-size: 28px;
     color: $gray;
@@ -71,13 +75,15 @@
 }
 
 .main-menu {
+  $_menuIconSize: 30px;
+
   border-top: 1px solid $gray;
   border-bottom: 1px solid $gray;
   margin-top: 24px;
   padding: 24px 0;
 
   > .item {
-    margin-bottom: 24px;
+    margin-bottom: 12px;
 
     &:last-child {
       margin-bottom: 0;
@@ -86,6 +92,51 @@
 
   > .item > .link {
     font-size: 18px;
+    position: relative;
+    padding: 8px 0 8px $_menuIconSize+16px;
+    display: block;
+
+    &:before {
+      content: '';
+      width: $_menuIconSize;
+      height: $_menuIconSize;
+      display: block;
+      position: absolute;
+      left: 0;
+    }
+
+    &.-home {
+      &:before {
+        background-image: url('../images/global/icon-menu-home.svg');
+      }
+      &.-current {
+        &:before {
+          background-image: url('../images/global/icon-menu-home-active.svg');
+        }
+      }
+    }
+
+    &.-lessons {
+      &:before {
+        background-image: url('../images/global/icon-menu-lessons.svg');
+      }
+      &.-current {
+        &:before {
+          background-image: url('../images/global/icon-menu-lessons-active.svg');
+        }
+      }
+    }
+
+    &.-messages {
+      &:before {
+        background-image: url('../images/global/icon-menu-messages.svg');
+      }
+      &.-current {
+        &:before {
+          background-image: url('../images/global/icon-menu-messages-active.svg');
+        }
+      }
+    }
 
     &.-current {
       color: $pink;
