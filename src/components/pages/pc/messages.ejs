@@ -10,8 +10,32 @@
   <% include common/_global_side %>
 
   <div class="global-main">
-    <div class="inner">
+    <div class="messages">
+      <div class="messages-list">
+        <% for (var i = 0; i < 12; i++) { %>
+          <% if (i === 0) { %>
+            <div class="messages-item -active">
+          <% } else { %>
+            <div class="messages-item">
+          <% } %>
+            <div class="avatar">
+              <img src="../images/global/avatar-girl.png" width="100%" height="auto" alt="user-avatar">
+            </div>
+            <div class="block">
+              <div class="meta">
+                <div class="profile">
+                  <strong>まみ</strong><span>東京都&nbsp;16才</span>
+                </div>
+                <div class="time">19:20</div>
+              </div>
+              <div class="content">メッセージが少し見える</div>
+            </div>
+          </div>
+        <% } %>
+      </div>
 
+      <div class="messages-content">
+      </div>
     </div>
   </div>
 </div>

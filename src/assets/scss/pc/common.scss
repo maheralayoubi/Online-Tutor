@@ -9,7 +9,7 @@
 
 .global-header {
   border-bottom: 1px solid $gray;
-  height: 64px;
+  height: $globalHeaderHeight;
   background-color: $bg-white;
   display: flex;
   align-items: center;
@@ -35,7 +35,7 @@
 
 .global-side {
   width: 280px;
-  height: 100vh;
+  min-height: calc(100vh - #{$globalHeaderHeight} );
   padding: 24px 20px;
   background-color: $bg-white;
   border-right: 1px solid $gray;
@@ -196,4 +196,70 @@
     border-radius: 4px;
     max-height: 48px;
   }
+}
+
+// =================================================================
+// messages
+// =================================================================
+
+.messages {
+  display: flex;
+}
+
+.messages-list {
+  width: 240px;
+  height: calc(100vh - #{$globalHeaderHeight} );
+  border-right: 1px solid $gray;
+  background-color: $bg-gray-lighten;
+  overflow-y: scroll;
+}
+
+.messages-item {
+  padding: 12px;
+  background-color: $white;
+  cursor: pointer;
+  display: flex;
+
+  &:last-child {
+    border-bottom: 1px solid $gray;
+  }
+
+  &:hover {
+    background-color: $bg-gray-lighten;
+  }
+
+  &:active {
+    background-color: $bg-gray-light;
+  }
+
+  &.-active {
+    background-color: $bg-gray-light;
+  }
+
+  > .avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  > .block {
+    margin-left: 12px;
+  }
+
+  > .block > .meta {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  > .block > .meta > .time {
+    flex: 0 0 auto;
+  }
+
+  > .block > .content {
+    font-size: 14px;
+  }
+}
+
+.messages-content {
+
 }
