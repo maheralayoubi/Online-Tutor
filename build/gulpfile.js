@@ -20,6 +20,9 @@ gulp.task('scss', done => {
       .pipe(sass({
         outputStyle: 'expanded',
       }).on('error', sass.logError))
+      // IE 11 or more, Android 4.4 or more
+      // Others are set to give the required vendor prefix in the latest 2 versions
+      .pipe($.autoprefixer(['last 2 versions', 'ie >= 11', 'Android >= 4']))
       .pipe(gulp.dest(paths.dist.css));
   done();
 });
