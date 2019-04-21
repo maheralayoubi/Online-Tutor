@@ -8,19 +8,25 @@
 
     <ul class="main-menu">
       <li class="item">
-        <a href="/pc/" class="link -home">
-          ホーム
-        </a>
+        <% if (slug === 'home') { %>
+          <a href="/pc/" class="link -home -current">ホーム</a>
+        <% } else { %>
+          <a href="/pc/" class="link -home">ホーーム</a>
+        <% } %>
       </li>
       <li class="item">
-        <a href="/pc/lessons" class="link -lessons">
-          レッスン
-        </a>
+        <% if (slug === 'lessons') { %>
+          <a href="/pc/lessons.html" class="link -lessons -current">レッスン</a>
+        <% } else { %>
+          <a href="/pc/lessons.html" class="link -lessons">レッスン</a>
+        <% } %>
       </li>
       <li class="item">
-        <a href="/pc/messages.html" class="link -messages">
-          メッセージ
-        </a>
+        <% if (slug === 'messages') { %>
+          <a href="/pc/messages.html" class="link -messages -current">メッセージ</a>
+        <% } else { %>
+          <a href="/pc/messages.html" class="link -messages">メッセージ</a>
+        <% } %>
       </li>
     </ul>
 
