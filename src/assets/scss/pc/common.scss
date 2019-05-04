@@ -256,6 +256,27 @@
   > .photos > .selected {
     background-color: $bg-gray;
     min-height: $_photoSize;
+    position: relative;
+  }
+
+  > .photos > .selected > .summary {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: $_space;
+    width: 100%;
+    color: $white;
+    background: linear-gradient(to bottom, transparent, $black-light);
+
+    > .name {
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    > .tweet {
+      font-size: 12px;
+      line-height: 1.4;
+    }
   }
 
   > .photos > .all {
@@ -304,18 +325,18 @@
 }
 
 .photos-list {
+  $_photoSize: 56px;
 
   // scrollable
   overflow-x: auto;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
+  height: $_photoSize;
 
   > .item {
     display: inline-block;
-
-    $_size: 56px;
-    width: $_size;
-    height: $_size;
+    width: $_photoSize;
+    height: $_photoSize;
     background-color: $bg-gray;
     border-radius: 4px;
     margin-right: 12px;

@@ -50,6 +50,10 @@
         <div class="photos">
           <div class="selected">
             <img src="../images/global/man-profile-1.jpg" width="100%" height="auto">
+            <div class="summary">
+              <div class="name"><%= profile.man.name %>&nbsp;<%= profile.man.age %>歳</div>
+              <div class="tweet"><%= profile.man.tweet %></div>
+            </div>
           </div>
           <div class="all">
             <div class="photos-list -scrollable">
@@ -74,27 +78,27 @@
             <div class="profile-data">
               <div class="block">
                 <span class="term">身長</span>
-                <span class="description">172cm</span>
+                <span class="description"><%= profile.man.height %></span>
               </div>
               <div class="block">
                 <span class="term">体型</span>
-                <span class="description">ふつう</span>
+                <span class="description"><%= profile.man.body_build %></span>
               </div>
               <div class="block">
                 <span class="term">血液型</span>
-                <span class="description">A型</span>
+                <span class="description"><%= profile.man.blood_type %></span>
               </div>
               <div class="block">
                 <span class="term">住所</span>
-                <span class="description">東京</span>
+                <span class="description"><%= profile.man.residence_state %></span>
               </div>
               <div class="block">
                 <span class="term">職業</span>
-                <span class="description">アルバイト</span>
+                <span class="description"><%= profile.man.job %></span>
               </div>
               <div class="block">
                 <span class="term">年収</span>
-                <span class="description">500万</span>
+                <span class="description"><%= profile.man.annual_income %></span>
               </div>
             </div>
           </div>
