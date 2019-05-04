@@ -1,12 +1,23 @@
 <div class="global-side">
   <div class="fixed-contents">
     <div class="my-profile">
-      <div class="avatar">
-        <a href="/pc/my.html">
-          <img src="../images/global/avatar-men.png" width="100%" height="auto" alt="user_name">
-        </a>
-      </div>
-      <div class="name">じろー</div>
+
+      <% if (VIEW_MODE === 'man') { %>
+        <div class="avatar">
+          <a href="/pc/my.html">
+            <img src="../images/global/avatar-man.png" width="100%" height="auto" alt="<%= profile.man.name %>">
+          </a>
+        </div>
+        <div class="name"><%= profile.man.name %></div>
+      <% } else if (VIEW_MODE === 'girl') { %>
+        <div class="avatar">
+          <a href="/pc/my.html">
+            <img src="../images/global/avatar-girl.png" width="100%" height="auto" alt="<%= profile.girl.name %>">
+          </a>
+        </div>
+        <div class="name"><%= profile.girl.name %></div>
+      <% } %>
+
       <a href="/pc/my.html" class="link">プロフィールをチェック</a>
     </div>
 
@@ -32,6 +43,15 @@
           <a href="/pc/messages.html" class="link -messages">メッセージ</a>
         <% } %>
       </li>
+      <% if (VIEW_MODE === 'girl') { %>
+        <li class="item">
+          <% if (slug === 'tweets') { %>
+            <a href="/pc/tweets.html" class="link -tweets -current">つぶやき</a>
+          <% } else { %>
+            <a href="/pc/tweets.html" class="link -tweets">つぶやき</a>
+          <% } %>
+        </li>
+      <% } %>
     </ul>
 
     <ul class="sub-menu">
