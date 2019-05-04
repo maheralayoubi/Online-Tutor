@@ -15,6 +15,12 @@
   align-items: center;
   padding: 0 20px;
 
+  // Settings for fixed
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+
   > .logo {
     margin-right: 20px;
   }
@@ -31,19 +37,24 @@
 
 .global-content {
   display: flex;
+
+  margin-top: $globalHeaderHeight;
 }
 
 .global-side {
+  $_gap: 24px;
+  $_gutter: 20px;
+
   width: 280px;
   min-height: calc(100vh - #{$globalHeaderHeight} );
-  padding: 24px 20px;
+  padding: $_gap $_gutter;
   background-color: $bg-white;
   border-right: 1px solid $gray;
   flex: 0 0 auto;
 
   > .fixed-contents {
     position: sticky;
-    top: $globalHeaderHeight;
+    top: $globalHeaderHeight + $_gap; // Prevent deviation when scrolling
     left: 0;
   }
 
