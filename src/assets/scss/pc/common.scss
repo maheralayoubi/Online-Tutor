@@ -259,7 +259,7 @@
   }
 
   > .photos > .all {
-    padding: $_space;
+    padding: 12px 0 12px 12px;
   }
 
   > .information {
@@ -300,6 +300,31 @@
   > .block > .term {
     color: $gray-dark;
     margin-right: 8px;
+  }
+}
+
+.photos-list {
+
+  // scrollable
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+
+  > .item {
+    display: inline-block;
+
+    $_size: 56px;
+    width: $_size;
+    height: $_size;
+    background-color: $bg-gray;
+    border-radius: 4px;
+    margin-right: 12px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &.-selected {
+      border: 2px solid $pink;
+    }
   }
 }
 
