@@ -41,6 +41,12 @@
   border-right: 1px solid $gray;
   flex: 0 0 auto;
 
+  > .fixed-contents {
+    position: sticky;
+    top: $globalHeaderHeight;
+    left: 0;
+  }
+
   > .copyright {
     text-align: center;
     display: block;
