@@ -1,0 +1,11 @@
+@import "../../common/variables";
+
+.badge {
+  border-radius: 12px;
+  font-size: 14px;
+  padding: 4px 12px;
+  color: $white;
+  font-weight: 700;
+  background-color: $pink;
+  line-height: 1;
+}
