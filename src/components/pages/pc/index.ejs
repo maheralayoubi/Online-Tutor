@@ -22,8 +22,9 @@
             <div class="name"><%= profile.girl.name %></div>
             <div class="age"><%= profile.girl.age %>才</div>
           <% } else if (VIEW_MODE === 'girl') { %>
-            <div class="avatar -with-shadow">
-              <img src="../images/global/avatar-man.png" width="100%" height="auto" alt="user-avatar">
+            <div
+              style="background-image: url('../images/global/man-profile-1.jpg')"
+              class="avatar -with-shadow">
             </div>
             <div class="name"><%= profile.man.name %></div>
             <div class="age"><%= profile.man.age %>才</div>
@@ -113,5 +114,4 @@
 </div>
 
 <div class="modal-backdrop"></div>
-
 <% include common/_footer %>
