@@ -19,7 +19,12 @@
           </div>
           <div class="name">しおん</div>
           <div class="age">20才</div>
-          <div class="tweet">一言のテキストがここに入ります。２行まで入る。</div>
+          <div class="tweet">
+            <% // @TODO テキストの出力数を制御する必要あり。_clampの使用は控えたい。 %>
+            <span class="_clamp-2">
+              一言のテキストがここに入ります。2行まで入る。一言のテキストがここに入ります。
+            </span>
+          </div>
         </div>
       <% } %>
     </div>
