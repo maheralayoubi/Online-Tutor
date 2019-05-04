@@ -105,9 +105,7 @@
 
   > .item {
     margin-bottom: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
 
     &:last-child {
       margin-bottom: 0;
@@ -176,6 +174,14 @@
     &.-current {
       color: $pink;
     }
+  }
+
+  > .item > .c-badge {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: -1;
   }
 }
 
