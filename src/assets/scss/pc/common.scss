@@ -239,6 +239,70 @@
   }
 }
 
+.profile-detailed {
+  $_space: 20px;
+  $_photoSize: 400px;
+
+  background-color: $bg-gray-light;
+  display: flex;
+  border-radius: inherit;
+  overflow: hidden;
+
+  > .photos {
+    width: $_photoSize;
+    flex: 0 0 auto;
+  }
+
+  > .photos > .selected {
+    background-color: $bg-gray;
+    min-height: $_photoSize;
+  }
+
+  > .photos > .all {
+    padding: $_space;
+  }
+
+  > .information {
+    padding: $_space;
+    width: 100%;
+    position: relative;
+  }
+
+  > .information > .content {
+    background-color: $white;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  > .information > .action {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: $_space;
+  }
+}
+
+.profile-data {
+  overflow: hidden;
+
+  > .block {
+    float: left;
+    font-size: 12px;
+    width: 50%;
+    margin-bottom: 4px;
+
+    &:nth-last-child(2),
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  > .block > .term {
+    color: $gray-dark;
+    margin-right: 8px;
+  }
+}
+
 // =================================================================
 // messages
 // =================================================================
