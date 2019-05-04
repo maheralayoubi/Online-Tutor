@@ -158,6 +158,17 @@
       }
     }
 
+    &.-tweets {
+      &:before {
+        background-image: url('../images/global/icon-menu-tweets.svg');
+      }
+      &.-current {
+        &:before {
+          background-image: url('../images/global/icon-menu-tweets-active.svg');
+        }
+      }
+    }
+
     &.-current {
       color: $pink;
     }
