@@ -44,3 +44,7 @@ $z-index:(
 }
 
 $z-index: list-reverse($z-index);
+
+@function z($name) {
+  @return index($z-index, $name);
+}
