@@ -19,18 +19,35 @@
           <% } else { %>
             <div class="messages-item">
           <% } %>
-            <div class="avatar">
-              <img src="../images/global/avatar-girl.png" width="100%" height="auto" alt="user-avatar">
-            </div>
-            <div class="block">
-              <div class="meta">
-                <div class="profile">
-                  <strong>まみ</strong><span>東京都&nbsp;16才</span>
-                </div>
-                <div class="time">19:20</div>
+            <% if (VIEW_MODE === 'man') { %>
+              <div
+                style="background-image: url('<%= profile.man.avatar_path %>')"
+                class="avatar">
               </div>
-              <div class="content">メッセージが少し見える</div>
-            </div>
+              <div class="block">
+                <div class="meta">
+                  <div class="profile">
+                    <strong><%= profile.girl.name %></strong>&nbsp;<span><%= profile.girl.residence_state %>&nbsp;<%= profile.girl.age %>歳</span>
+                  </div>
+                  <div class="time">19:20</div>
+                </div>
+                <div class="content _ellipsis">まみです！</div>
+              </div>
+            <% } else if (VIEW_MODE === 'girl') { %>
+              <div
+                style="background-image: url('<%= profile.man.avatar_path %>')"
+                class="avatar">
+              </div>
+              <div class="block">
+                <div class="meta">
+                  <div class="profile">
+                    <strong><%= profile.man.name %></strong>&nbsp;<span><%= profile.man.age %>歳</span>
+                  </div>
+                  <div class="time">19:20</div>
+                </div>
+                <div class="content _ellipsis">はじめまして！じろーです！いまからお話しましょう！</div>
+              </div>
+            <% } %>
           </div>
         <% } %>
       </div>
