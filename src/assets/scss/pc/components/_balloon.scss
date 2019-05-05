@@ -1,0 +1,39 @@
+@import "../../common/variables";
+
+.balloon {
+  background-color: $bg-gray;
+  padding: 8px 16px;
+  position: relative;
+  font-size: 14px;
+
+  $_arrowSize: 4px;
+  &.-arrow-left {
+    border-radius: 0 4px 4px 4px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -($_arrowSize*2);
+      border-top: $_arrowSize solid $bg-gray;
+      border-right: $_arrowSize solid $bg-gray;
+      border-bottom: $_arrowSize solid transparent;
+      border-left: $_arrowSize solid transparent;
+    }
+  }
+
+  &.-arrow-right {
+    border-radius: 4px 0 4px 4px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -($_arrowSize*2);
+      border-top: $_arrowSize solid $bg-gray;
+      border-left: $_arrowSize solid $bg-gray;
+      border-bottom: $_arrowSize solid transparent;
+      border-right: $_arrowSize solid transparent;
+    }
+  }
+}
