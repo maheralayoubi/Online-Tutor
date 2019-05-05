@@ -279,6 +279,12 @@
       font-size: 12px;
       line-height: 1.4;
     }
+
+    > .action {
+      position: absolute;
+      right: $_space;
+      top: $_space + 4;
+    }
   }
 
   > .photos > .all {
@@ -354,15 +360,41 @@
 }
 
 // 「…」menu
-.ellipsis-menu {
+$_ellipsisMenuButtonSize: 20px;
 
+.ellipsis-menu {
+  position: relative;
+}
+
+.ellipsis-menu-button {
   &:before {
     $_size: 20px;
     content: '';
-    width: $_size;
-    height: $_size;
+    width: $_ellipsisMenuButtonSize;
+    height: $_ellipsisMenuButtonSize;
     background-image: url('../images/global/icon-ellipsis.svg');
     background-size: cover;
+    display: block;
+  }
+}
+
+.ellipsis-menu-list {
+  border-radius: 4px;
+  position: absolute;
+  top: $_ellipsisMenuButtonSize + 8;
+  right: 0;
+  background-color: $bg-gray-light;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .2);
+  min-width: 160px;
+
+  display: none;
+
+  > .item {
+    font-size: 14px;
+  }
+
+  > .item > .link {
+    padding: 8px 12px;
     display: block;
   }
 }
