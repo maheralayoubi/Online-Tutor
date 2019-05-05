@@ -19,3 +19,8 @@
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
+
+// To show display:none DOM from javascript
+._open {
+  display: block!important;
+}
