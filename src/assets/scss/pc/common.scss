@@ -7,6 +7,7 @@
 // Components
 @import "./components/avatar";
 @import "./components/badge";
+@import "./components/balloon";
 @import "./components/base";
 @import "./components/button";
 @import "./components/modal";
@@ -416,10 +417,11 @@ $_ellipsisMenuButtonSize: 20px;
   border-right: 1px solid $gray;
   background-color: $bg-gray-lighten;
   overflow-y: scroll;
+  flex: 0 0 auto;
 }
 
 .messages-item {
-  padding: 12px;
+  padding: 16px 12px;
   background-color: $white;
   cursor: pointer;
   display: flex;
@@ -464,6 +466,91 @@ $_ellipsisMenuButtonSize: 20px;
   }
 }
 
-.messages-content {
+$_messagePanelHeaderHeight: 56px;
+$_messagePanelSpace: 16px;
 
+.messages-panel {
+  width: 100%;
+  min-width: 480px;
+  position: relative;
+  background-color: $white;
+}
+
+.messages-panel-header {
+  background-color: $white;
+  border-bottom: 1px solid $gray;
+  padding: 0 $_messagePanelSpace;
+  width: 100%;
+  height: $_messagePanelHeaderHeight;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  > .profile {
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  > .profile > .age {
+    font-size: 12px;
+    color: $gray-dark;
+  }
+
+  > .action {
+    font-size: 14px;
+
+    button {
+      color: $pink;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+}
+
+.messages-panel-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.message-threads {
+  overflow: hidden;
+  padding: $_messagePanelSpace;
+}
+
+.message-threads-item {
+  display: flex;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  > .avatar {
+    flex: 0 0 auto;
+  }
+
+  > .block {
+    margin-left: 12px;
+  }
+
+  > .block > .name {
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  > .block > .balloon {
+    margin-left: 8px;
+    max-width: 400px;
+  }
+
+  // message sent by myself
+  &.-myself {
+    justify-content: flex-end;
+
+    > .block > .balloon {
+      @extend .balloon.-arrow-right;
+    }
+  }
 }
