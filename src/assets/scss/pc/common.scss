@@ -360,6 +360,8 @@
 }
 
 // 「…」menu
+// @NOTE .ellipsis-menu のDOMの中に、
+//       .ellipsis-menu-button と .ellipsis-menu-list を内包させ、隣り合う要素にする。
 $_ellipsisMenuButtonSize: 20px;
 
 .ellipsis-menu {
@@ -398,6 +400,7 @@ $_ellipsisMenuButtonSize: 20px;
     display: block;
   }
 }
+
 
 // =================================================================
 // messages

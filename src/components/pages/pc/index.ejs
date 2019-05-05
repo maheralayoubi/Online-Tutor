@@ -54,6 +54,22 @@
             <div class="summary">
               <div class="name"><%= profile.man.name %>&nbsp;<%= profile.man.age %>歳</div>
               <div class="tweet"><%= profile.man.tweet %></div>
+              <div class="action">
+                <div class="ellipsis-menu">
+                  <button
+                    type="button"
+                    class="ellipsis-menu-button js-ellipsis-menu-button"></button>
+                  <ul class="ellipsis-menu-list js-ellipsis-menu-list">
+                    <li class="item">
+                      <a
+                        class="link"
+                        href="<%# @TODO 通報フォームのリンク入れる%>">
+                        ユーザーを通報する
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
           <div class="all">
