@@ -3,6 +3,7 @@
 
 $profileItem  = $('.js-profile-item');
 $modalClose   = $('.js-modal-close');
+$ellipsisMenuButton = $('.js-ellipsis-menu-button')
 
 $profileItem.on('click', function () {
   openModal();
@@ -10,6 +11,10 @@ $profileItem.on('click', function () {
 
 $modalClose.on('click', function () {
   closeModal();
+});
+
+$ellipsisMenuButton.on('click', function () {
+  $(this).next($('.js-ellipsis-menu-list')).toggleClass('_open')
 });
 
 function openModal() {
