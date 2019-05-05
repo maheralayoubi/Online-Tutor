@@ -35,7 +35,64 @@
         <% } %>
       </div>
 
-      <div class="messages-content">
+      <div class="messages-panel">
+        <div class="messages-panel-header">
+          <div class="action">
+            <button type="button" class="">生徒詳細</button>
+          </div>
+
+          <div class="profile">
+            <div class="name"><%= profile.man.name %></div>
+            <div class="age"><%= profile.man.age %>歳</div>
+          </div>
+
+          <div class="action">
+            <button type="button" class="">クラスを作成する</button>
+          </div>
+        </div>
+        <div class="messages-panel-body">
+          <div class="message-threads">
+
+            <div class="message-threads-item">
+              <div
+                style="background-image: url(<%= profile.man.avatar_path %>)"
+                class="avatar -size-small">
+              </div>
+              <div class="block">
+                <div class="name"><%= profile.man.name %></div>
+                <div class="balloon -arrow-left">
+                  はじめまして！じろーです！いまからお話しましょう！
+                </div>
+              </div>
+            </div>
+
+            <% for (var i = 0; i < 5; i++) { %>
+            <div class="message-threads-item">
+              <div
+                style="background-image: url(<%= profile.man.avatar_path %>)"
+                class="avatar -size-small">
+              </div>
+              <div class="block">
+                <div class="name"><%= profile.man.name %></div>
+                <div class="balloon -arrow-left">
+                  １クラス４０００円でどー？+(o'∀'o)+. 長文が入ったことも想定した文章です。最大の横幅を480pxに指定しています。長文が入ったことも想定した文章です。最大の横幅を480pxに指定しています。長文が入ったことも想定した文章です。最大の横幅を480pxに指定しています。長文が入ったことも想定した文章です。最大の横幅を480pxに指定しています。
+                </div>
+              </div>
+            </div>
+            <% } %>
+
+            <div class="message-threads-item -myself">
+              <div class="block">
+                <div class="balloon">
+                  いいよーいくら？
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="messages-panel-footer">
+        </div>
       </div>
     </div>
   </div>

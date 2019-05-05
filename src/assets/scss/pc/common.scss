@@ -467,7 +467,8 @@ $_ellipsisMenuButtonSize: 20px;
 }
 
 $_messagePanelHeaderHeight: 56px;
-$_messagePanelSpace: 16px;
+$_messagePanelFooterHeight: 48px;
+$_messagePanelSpace: 24px;
 
 .messages-panel {
   width: 100%;
@@ -507,10 +508,18 @@ $_messagePanelSpace: 16px;
   }
 }
 
+.messages-panel-body {
+  height: calc(100vh - #{$globalHeaderHeight} - #{$_messagePanelHeaderHeight} - #{$_messagePanelFooterHeight} );
+  overflow-y: auto;
+}
+
 .messages-panel-footer {
   position: absolute;
   bottom: 0;
   left: 0;
+  min-height: $_messagePanelFooterHeight;
+  width: 100%;
+  border-top: 1px solid $gray;
 }
 
 .message-threads {
@@ -520,7 +529,7 @@ $_messagePanelSpace: 16px;
 
 .message-threads-item {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: $_messagePanelSpace;
 
   &:last-child {
     margin-bottom: 0;
