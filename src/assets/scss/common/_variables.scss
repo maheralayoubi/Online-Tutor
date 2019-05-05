@@ -24,3 +24,23 @@ $bg-gray:         #eaeaea;
 $bg-gray-dark:    #eaeaea;
 
 $bg-pink:           $pink;
+
+
+// manage z-index
+// @see https://qiita.com/sou_lab/items/5dc04ef02c99ee7e8a80
+$z-index:(
+  // ↑ on the top
+  modalClose,
+  modal,
+  modalBackdrop
+);
+
+@function list-reverse($map) {
+  $result: ();
+  @for $i from length($map)*-1 through -1 {
+    $result: append($result, nth($map, abs($i)), comma);
+  }
+  @return $result;
+}
+
+$z-index: list-reverse($z-index);

@@ -21,9 +21,9 @@ $_modalGap: 40px;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 2;
-  // display: none;
+  display: none;
   overflow: hidden;
+  z-index: z(modal);
 
   // Prevent Chrome on Windows from adding a focus outline.
   // For details, see
@@ -76,8 +76,13 @@ $_modalGap: 40px;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: z(modalBackdrop);
   background-color: rgba(0, 0, 0, .5);
+  display: none;
+
+  .modal-open & {
+    display: block;
+  }
 }
 
 .modal-close {
@@ -91,6 +96,7 @@ $_modalGap: 40px;
   border: 1px solid $gray;
   background-color: #fff;
   border-radius: 50%;
+  z-index: z(modalClose);
 
   &:before,
   &:after {
