@@ -421,10 +421,13 @@ $_ellipsisMenuButtonSize: 20px;
 }
 
 .messages-item {
+  $_avatarSize: 40px;
+
   padding: 16px 12px;
   background-color: $white;
   cursor: pointer;
   display: flex;
+  align-items: center;
 
   &:last-child {
     border-bottom: 1px solid $gray;
@@ -443,26 +446,32 @@ $_ellipsisMenuButtonSize: 20px;
   }
 
   > .avatar {
-    width: 40px;
-    height: 40px;
+    width: $_avatarSize;
+    height: $_avatarSize;
+    flex: 0 0 auto;
   }
 
   > .block {
-    margin-left: 12px;
+    $_space: 12px;
+    margin-left: $_space;
+    width: calc(100% - #{$_avatarSize} - #{$_space});
   }
 
   > .block > .meta {
     font-size: 12px;
     display: flex;
     justify-content: space-between;
+    line-height: 1.4;
+    margin-bottom: 4px;
   }
 
   > .block > .meta > .time {
     flex: 0 0 auto;
+    color: $gray-dark;
   }
 
   > .block > .content {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
