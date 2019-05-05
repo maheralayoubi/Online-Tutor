@@ -1,0 +1,42 @@
+@import "../../common/variables";
+
+.button {
+  display: inline-block;
+  text-align: center;
+  user-select: none;
+  background-color: transparent;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: color .15s ease-in-out,
+              background-color .15s ease-in-out,
+              border-color .15s ease-in-out,
+              box-shadow .15s ease-in-out;
+
+  &.-primary {
+    background-color: $pink;
+    color: $white;
+  }
+
+  &.-primary-outline {
+    border: 1px solid $pink;
+    color: $pink;
+
+    &:hover {
+      background-color: $pink;
+      color: $white;
+    }
+
+    &:active {
+      background-color: darken($pink, 5%);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, .1) inset;
+    }
+  }
+
+  &.-block {
+    width: 100%;
+    display: block;
+  }
+}

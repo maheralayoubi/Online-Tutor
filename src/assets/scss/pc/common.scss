@@ -8,6 +8,7 @@
 @import "./components/avatar";
 @import "./components/badge";
 @import "./components/base";
+@import "./components/button";
 @import "./components/modal";
 
 .global-header {
@@ -281,7 +282,7 @@
   }
 
   > .photos > .all {
-    padding: 12px 0 12px 12px;
+    padding: $_space 0 $_space $_space;
   }
 
   > .information {
@@ -300,7 +301,8 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    margin: $_space;
+    padding: $_space;
+    width: 100%;
   }
 }
 
