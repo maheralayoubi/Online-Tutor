@@ -572,3 +572,25 @@ $_messagePanelSpace: 24px;
     }
   }
 }
+
+.message-form {
+  display: flex;
+  align-items: flex-end;
+  padding: 8px;
+  background-color: $white;
+
+  > .textarea {
+    width: 100%;
+    margin-right: 8px;
+    padding: 8px;
+    height: 38px; // WIP
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  > .button {
+    flex: 0 0 auto;
+  }
+}
