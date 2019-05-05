@@ -13,7 +13,7 @@
   <div class="global-main">
     <div class="profile-list">
       <% for (var i = 0; i < 30; i++) { %>
-        <div class="profile-item">
+        <div class="profile-item js-profile-item">
 
           <% if (VIEW_MODE === 'man') { %>
             <div class="avatar -with-shadow">
@@ -42,10 +42,10 @@
   </div>
 </div>
 
-<div class="modal" tabindex="-1" role="dialog" style="display: block;">
+<div class="modal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+      <button type="button" class="modal-close js-modal-close" data-dismiss="modal" aria-label="Close"></button>
 
       <div class="profile-detailed">
         <div class="photos">
