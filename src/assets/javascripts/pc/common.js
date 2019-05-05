@@ -2,11 +2,16 @@
 // @TODO Need to rewrite to Vue.js
 
 $showDetailedProfile  = $('.js-show-detailed-profile');
+$createClass          = $('.js-create-class');
 $modalClose           = $('.js-modal-close');
 $ellipsisMenuButton   = $('.js-ellipsis-menu-button')
 
 $showDetailedProfile.on('click', function () {
-  openModal();
+  openModal(getTargetModalId($(this)));
+});
+
+$createClass.on('click', function () {
+  openModal(getTargetModalId($(this)));
 });
 
 $modalClose.on('click', function () {
@@ -17,10 +22,16 @@ $ellipsisMenuButton.on('click', function () {
   $(this).next($('.js-ellipsis-menu-list')).toggleClass('_open')
 });
 
-function openModal() {
-  $('body').addClass('modal-open')
+function getTargetModalId($target) {
+  return $target.data('target-modal-id');
+}
+
+function openModal(targetModalId) {
+  $('body').addClass('modal-open');
+  $(targetModalId).show();
 }
 
 function closeModal() {
-  $('body').removeClass('modal-open')
+  $('body').removeClass('modal-open');
+  $('.modal').hide();
 }

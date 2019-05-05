@@ -29,10 +29,6 @@ $_modalGap: 40px;
   // For details, see
   // https://github.com/twbs/bootstrap/pull/10951.
   outline: 0;
-
-  .modal-open & {
-    display: block;
-  }
 }
 
 .modal-dialog {
