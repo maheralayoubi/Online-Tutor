@@ -5,13 +5,15 @@ const browserSync = require('browser-sync');
 
 const paths = {
   'src': {
-    'scss': '../src/assets/scss/*/*.scss',
-    'ejs': ['../src/components/pages/*/*.ejs', '!' + '../src/components/pages/*/_*.ejs'],
+    'scss'  : '../src/assets/scss/*/*.scss',
+    'js'    : '../src/assets/javascripts/*/*.js',
+    'ejs'   : ['../src/components/pages/*/*.ejs', '!' + '../src/components/pages/*/_*.ejs'],
     'images': ['../src/assets/images/*/*.svg', '../src/assets/images/*/*.png', '../src/assets/images/*/*.jpg' ]
   },
   'dist': {
-    'css': '../dist',
-    'html': '../dist',
+    'css'   : '../dist',
+    'js'    : '../dist',
+    'html'  : '../dist',
     'images': '../dist/images'
   }
 };
@@ -45,6 +47,13 @@ gulp.task('images', done => {
   done();
 });
 
+// Save javascript file
+gulp.task('js', done => {
+  gulp.src(paths.src.js)
+    .pipe(gulp.dest(paths.dist.js));
+  done();
+});
+
 // Server start-up
 gulp.task('server', function () {
   return browserSync.init({
@@ -58,6 +67,7 @@ gulp.task('reload', function () {
 });
 
 gulp.task('watch', done => {
+  gulp.watch(paths.src.js,      ['reload', 'js']);
   gulp.watch(paths.src.ejs,     ['reload', 'ejs']);
   gulp.watch(paths.src.scss,    ['reload', 'scss']);
   gulp.watch(paths.src.images,  ['reload', 'images']);
@@ -65,4 +75,4 @@ gulp.task('watch', done => {
 });
 
 gulp.task('default', ['watch', 'server']);
-gulp.task('build', ['ejs', 'scss', 'images']);
+gulp.task('build', ['ejs', 'js', 'scss', 'images']);
