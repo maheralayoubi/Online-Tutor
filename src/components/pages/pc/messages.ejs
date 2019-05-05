@@ -13,7 +13,7 @@
   <div class="global-main">
     <div class="messages">
       <div class="messages-list">
-        <% for (var i = 0; i < 12; i++) { %>
+        <% for (var i = 0; i < 16; i++) { %>
           <% if (i === 0) { %>
             <div class="messages-item -active">
           <% } else { %>
@@ -55,7 +55,7 @@
       <div class="messages-panel">
         <div class="messages-panel-header">
           <div class="action">
-            <button type="button" class="">生徒詳細</button>
+            <button type="button" class="js-show-detailed-profile">生徒詳細</button>
           </div>
 
           <div class="profile">
@@ -119,4 +119,5 @@
   </div>
 </div>
 
+<% include modules/_modal_detailed_profile %>
 <% include common/_footer %>
