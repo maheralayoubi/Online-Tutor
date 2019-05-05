@@ -1,11 +1,11 @@
 // for operation check
 // @TODO Need to rewrite to Vue.js
 
-$profileItem  = $('.js-profile-item');
-$modalClose   = $('.js-modal-close');
-$ellipsisMenuButton = $('.js-ellipsis-menu-button')
+$showDetailedProfile  = $('.js-show-detailed-profile');
+$modalClose           = $('.js-modal-close');
+$ellipsisMenuButton   = $('.js-ellipsis-menu-button')
 
-$profileItem.on('click', function () {
+$showDetailedProfile.on('click', function () {
   openModal();
 });
 
