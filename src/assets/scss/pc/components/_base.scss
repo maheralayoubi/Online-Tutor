@@ -24,6 +24,17 @@ textarea {
   border: 0;
 }
 
+label {
+  display: inline-block;
+  margin-bottom: 4px;
+  color: $black-lighten;
+  font-size: 14px;
+}
+
+select + select {
+  margin-left: 12px;
+}
+
 a {
   color: $black-light;
   text-decoration: none;
