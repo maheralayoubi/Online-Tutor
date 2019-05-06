@@ -55,7 +55,10 @@
       <div class="messages-panel">
         <div class="messages-panel-header">
           <div class="action">
-            <button type="button" class="js-show-detailed-profile">生徒詳細</button>
+            <button
+              type="button"
+              class="js-show-detailed-profile"
+              data-target-modal-id="#modal-detailed-profile">生徒詳細</button>
           </div>
 
           <div class="profile">
@@ -64,7 +67,10 @@
           </div>
 
           <div class="action">
-            <button type="button" class="">クラスを作成する</button>
+            <button
+              type="button"
+              class="js-create-class"
+              data-target-modal-id="#modal-create-class">クラスを作成する</button>
           </div>
         </div>
         <div class="messages-panel-body">
@@ -120,4 +126,5 @@
 </div>
 
 <% include modules/_modal_detailed_profile %>
+<% include modules/_modal_create_class %>
 <% include common/_footer %>
