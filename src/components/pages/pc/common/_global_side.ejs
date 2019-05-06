@@ -1,20 +1,20 @@
 <div class="global-side">
   <div class="fixed-contents">
-    <div class="my-profile">
+    <div class="my-profile-side">
 
       <% if (VIEW_MODE === 'man') { %>
-        <div class="avatar">
-          <a href="/pc/my.html">
-            <img src="../images/global/avatar-man.jpg" width="100%" height="auto" alt="<%= profile.man.name %>">
-          </a>
-        </div>
+        <a
+          style="background-image: url(<%= profile.man.avatar_path %>)"
+          class="avatar"
+          href="/pc/my.html">
+        </a>
         <div class="name"><%= profile.man.name %></div>
       <% } else if (VIEW_MODE === 'girl') { %>
-        <div class="avatar">
-          <a href="/pc/my.html">
-            <img src="../images/global/avatar-girl.png" width="100%" height="auto" alt="<%= profile.girl.name %>">
-          </a>
-        </div>
+        <a
+          style="background-image: url(<%= profile.girl.avatar_path %>)"
+          class="avatar"
+          href="/pc/my.html">
+        </a>
         <div class="name"><%= profile.girl.name %></div>
       <% } %>
 
