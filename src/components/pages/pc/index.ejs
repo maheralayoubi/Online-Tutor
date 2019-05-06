@@ -13,7 +13,9 @@
   <div class="global-main">
     <div class="profile-list">
       <% for (var i = 0; i < 30; i++) { %>
-        <div class="profile-item js-show-detailed-profile">
+        <div
+          class="profile-item js-show-detailed-profile"
+          data-target-modal-id="#modal-detailed-profile">
 
           <% if (VIEW_MODE === 'man') { %>
             <div class="avatar -with-shadow">
