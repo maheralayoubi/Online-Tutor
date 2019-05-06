@@ -35,6 +35,26 @@
     }
   }
 
+  &.-secondary {
+    background-color: $black-light;
+    color: $white;
+  }
+
+  &.-secondary-outline {
+    border: 1px solid $black-light;
+    color: $black-light;
+
+    &:hover {
+      background-color: $black-light;
+      color: $white;
+    }
+
+    &:active {
+      background-color: darken($black-light, 5%);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, .1) inset;
+    }
+  }
+
   &.-block {
     width: 100%;
     display: block;
