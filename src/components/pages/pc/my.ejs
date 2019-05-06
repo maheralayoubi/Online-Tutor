@@ -10,10 +10,81 @@
 <div class="global-content">
   <% include common/_global_side %>
 
-  <div class="global-main">
-    <div class="inner">
+  <div class="global-main -with-inner-space">
 
+    <div class="card">
+      <div class="card-inner">
+        <div class="my-profile">
+
+          <div class="photos">
+            <div class="main">
+              <img src="<%= profile.girl.avatar_path %>" width="100%" height="auto">
+            </div>
+
+            <div class="photos-list">
+              <div class="item -selected">
+                <img src="../images/global/girl-profile-1.jpg" width="100%" height="auto">
+              </div>
+              <div class="item">
+                <img src="../images/global/girl-profile-2.jpg" width="100%" height="auto">
+              </div>
+              <div class="item">
+                <img src="../images/global/girl-profile-3.jpg" width="100%" height="auto">
+              </div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+            </div>
+          </div>
+
+          <div class="information">
+            <h2 class="name"><%= profile.girl.name %></h2>
+            <div class="profile-data">
+              <div class="block">
+                <span class="term">身長</span>
+                <span class="description"><%= profile.girl.height %></span>
+              </div>
+              <div class="block">
+                <span class="term">体型</span>
+                <span class="description"><%= profile.girl.body_build %></span>
+              </div>
+              <div class="block">
+                <span class="term">血液型</span>
+                <span class="description"><%= profile.girl.blood_type %></span>
+              </div>
+              <div class="block">
+                <span class="term">住所</span>
+                <span class="description"><%= profile.girl.residence_state %></span>
+              </div>
+              <div class="block">
+                <span class="term">職業</span>
+                <span class="description"><%= profile.girl.job %></span>
+              </div>
+              <div class="block">
+                <span class="term">年収</span>
+                <span class="description"><%= profile.man.annual_income %></span>
+              </div>
+            </div>
+            <div class="balloon -arrow-left">
+              <%= profile.girl.tweet %>
+            </div>
+          </div>
+
+          <div class="edit">
+            <a href="/pc/my/edit" class="button -secondary-outline">
+              プロフィールの編集
+            </a>
+          </div>
+
+        </div>
+      </div>
     </div>
+
+    <div class="card">
+      <div class="card-header">振込先情報</div>
+    </div>
+
   </div>
 </div>
 
