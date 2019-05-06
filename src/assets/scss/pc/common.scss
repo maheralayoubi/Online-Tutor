@@ -10,6 +10,7 @@
 @import "./components/balloon";
 @import "./components/base";
 @import "./components/button";
+@import "./components/card";
 @import "./components/form";
 @import "./components/modal";
 
@@ -73,16 +74,22 @@
 .global-main {
   background-color: $bg-gray;
   flex: 1;
+  min-width: 800px;
+
+  &.-with-inner-space {
+    padding: 32px 20px;
+  }
 
   > .inner {
     max-width: 920px;
   }
 }
 
-.my-profile {
+.my-profile-side {
   text-align: center;
 
   > .avatar {
+    display: block;
     margin: 0 auto 12px;
     width: 112px;
     height: 112px;
@@ -339,11 +346,13 @@
   $_photoSize: 56px;
 
   // scrollable
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  height: $_photoSize;
+  &.-scrollable {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    height: $_photoSize;
+  }
 
   > .item {
     display: inline-block;
@@ -358,8 +367,13 @@
     &.-selected {
       border: 2px solid $pink;
     }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 }
+
 
 // 「…」menu
 // @NOTE .ellipsis-menu のDOMの中に、
@@ -624,5 +638,47 @@ $_messagePanelSpace: 24px;
     max-width: 200px;
     margin: auto;
     text-align: center;
+  }
+}
+
+
+// =================================================================
+// my
+// =================================================================
+
+.my-profile {
+  display: flex;
+  align-items: flex-start;
+
+  > .photos {
+    margin-right: 32px;
+    max-width: 200px;
+    flex: 0 0 auto;
+  }
+
+  > .photos > .main {
+    margin-bottom: 32px;
+    min-height: 200px;
+  }
+
+  > .information {
+    min-width: 280px;
+  }
+
+  > .information > .name {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  > .information > .balloon {
+    margin-top: 16px;
+  }
+
+  > .edit {
+    margin-left: auto;
+  }
+
+  .photos-list {
+    margin-right: -1px;
   }
 }
