@@ -10,6 +10,7 @@
 @import "./components/balloon";
 @import "./components/base";
 @import "./components/button";
+@import "./components/form";
 @import "./components/modal";
 
 .global-header {
@@ -592,5 +593,36 @@ $_messagePanelSpace: 24px;
 
   > .button {
     flex: 0 0 auto;
+  }
+}
+
+.form-class-row {
+  display: flex;
+
+  // クラスの名前
+  &.-name {
+    max-width: 280px;
+  }
+
+  // クラスの日付
+  &.-date {
+    max-width: 120px;
+  }
+
+  // クラスがはじまる時間
+  &.-time {
+    max-width: 120px;
+  }
+
+  // クラスの料金
+  &.-tuitionfee {
+    max-width: 80px;
+  }
+
+  // クラスを作成する
+  &.-create {
+    max-width: 200px;
+    margin: auto;
+    text-align: center;
   }
 }
