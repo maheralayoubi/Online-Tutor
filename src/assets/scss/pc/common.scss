@@ -682,3 +682,25 @@ $_messagePanelSpace: 24px;
     margin-right: -1px;
   }
 }
+
+// 振込先情報
+.bank-information {
+  display: flex;
+  font-size: 14px;
+
+  > .title {
+    font-weight: 700;
+  }
+
+  > .content {
+    margin-left: 20px;
+  }
+
+  > .content > .row {
+    margin-bottom: 4px;
+  }
+
+  > .edit {
+    margin-left: auto;
+  }
+}
