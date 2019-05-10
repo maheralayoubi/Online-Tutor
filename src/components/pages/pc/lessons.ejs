@@ -9,8 +9,33 @@
 <div class="global-content">
   <% include common/_global_side %>
 
-  <div class="global-main">
+  <div class="global-main -with-inner-space">
     <div class="inner">
+
+      <div class="lessons">
+
+        <% for (var i = 0; i < 30; i++) { %>
+          <a href="lessons_detail.html" class="lessons-item card">
+            <div
+              style="background-image: url(<%= profile.man.avatar_path %>)"
+              class="avatar -with-shadow">
+            </div>
+            <div class="block">
+              <div class="name"><%= profile.man.name %></div>
+              <div class="age"><%= profile.man.age %>才</div>
+              <div class="content">英語の授業 2019年05月10日 18:00 ~ 20:00</div>
+              <div class="tuitionfee">4,500円/クラス</div>
+              <%# @NOTE 予約が未承認の場合のみ表示される %>
+              <div class="approval">
+                <button type="button" class="button -primary">
+                  予約を承認する
+                </button>
+              </div>
+            </div>
+          </a>
+        <% } %>
+
+      </div>
 
     </div>
   </div>
