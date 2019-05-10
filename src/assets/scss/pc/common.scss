@@ -417,6 +417,50 @@ $_ellipsisMenuButtonSize: 20px;
   }
 }
 
+// =================================================================
+// lessons
+// =================================================================
+
+.lessons {
+
+}
+
+.lessons-item {
+  display: flex;
+  padding: 16px;
+
+  > .avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  > .block {
+    margin-left: 20px;
+
+    > .name {
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    > .age {
+      font-size: 12px;
+    }
+
+    > .content {
+      margin-top: 4px;
+      font-size: 14px;
+    }
+
+    > .tuitionfee {
+      font-size: 14px;
+    }
+
+    > .approval {
+      margin-top: 20px;
+    }
+  }
+
+}
 
 // =================================================================
 // messages
