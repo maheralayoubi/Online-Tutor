@@ -85,6 +85,12 @@
   }
 }
 
+.global-main-title {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: $gray-dark;
+}
+
 .my-profile-side {
   text-align: center;
 
@@ -425,6 +431,7 @@ $_ellipsisMenuButtonSize: 20px;
 
 }
 
+// レッスン一覧
 .lessons-item {
   display: flex;
   padding: 16px;
@@ -459,8 +466,31 @@ $_ellipsisMenuButtonSize: 20px;
       margin-top: 20px;
     }
   }
-
 }
+
+// レッスン詳細
+.lessons-detail {
+  display: flex;
+}
+
+.lessons-detail-content {
+  margin-left: 20px;
+
+  > .row {
+    margin-bottom: 16px;
+
+    > .title {
+      font-size: 12px;
+      color: $gray-dark;
+      margin-bottom: 4px;
+    }
+
+    &:last-child {
+      margin-top: 40px;
+    }
+  }
+}
+
 
 // =================================================================
 // messages

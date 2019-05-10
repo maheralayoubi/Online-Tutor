@@ -1,0 +1,61 @@
+<%
+  var title = 'レッスンの詳細';
+  var slug  = 'lessons';
+%>
+
+<% include common/_header %>
+<% include common/_global_header %>
+
+<div class="global-content">
+  <% include common/_global_side %>
+
+  <div class="global-main -with-inner-space">
+    <div class="inner">
+      <h2 class="global-main-title">レッスン詳細</h2>
+        <div class="lessons-detail card -with-inner-space">
+          <div
+            style="background-image: url(<%= profile.man.avatar_path %>)"
+            class="avatar -with-shadow">
+          </div>
+          <div class="lessons-detail-content">
+            <div class="row">
+              <h3 class="title">レッスン内容</h3>
+              <div class="description">英語の授業</div>
+            </div>
+            <div class="row">
+              <h3 class="title">生徒の詳細</h3>
+              <div class="description"><%= profile.man.name %> <%= profile.man.age %>才</div>
+            </div>
+            <div class="row">
+              <h3 class="title">レッスンの時間</h3>
+              <div class="description">
+                <div>
+                  <span class="_mr-4">開始時間</span>
+                  <span>2019/05/10 18:00</span>
+                </div>
+                <div>
+                  <span class="_mr-4">終了時間</span>
+                  <span>2019/05/10 20:00</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <h3 class="title">代金</h3>
+              <div class="description">¥4,500-</div>
+            </div>
+
+            <%# @NOTE 予約が未承認の場合のみ表示される %>
+            <div class="row">
+              <button type="button" class="button -primary">
+                予約を承認する
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<% include common/_footer %>
