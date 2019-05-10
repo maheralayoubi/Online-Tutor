@@ -19,6 +19,15 @@
   &.-primary {
     background-color: $pink;
     color: $white;
+
+    &:hover {
+      background-color: lighten($pink, 10%);
+    }
+
+    &:active {
+      background-color: darken($pink, 5%);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, .1) inset;
+    }
   }
 
   &.-primary-outline {
