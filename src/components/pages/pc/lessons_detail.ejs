@@ -44,12 +44,14 @@
               <div class="description">¥4,500-</div>
             </div>
 
-            <%# @NOTE 予約が未承認の場合のみ表示される %>
-            <div class="row">
-              <button type="button" class="button -primary">
-                予約を承認する
-              </button>
-            </div>
+            <% if (VIEW_MODE === 'man') { %>
+              <%# @NOTE 予約が未承認の場合のみ表示される %>
+              <div class="row">
+                <button type="button" class="button -primary">
+                  予約を承認する
+                </button>
+              </div>
+            <% } %>
           </div>
         </div>
       </div>

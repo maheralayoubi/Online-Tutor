@@ -31,13 +31,14 @@
               <div class="age"><%= profile.man.age %>才</div>
               <div class="content">英語の授業 2019年05月10日 18:00 ~ 20:00</div>
               <div class="tuitionfee">4,500円/クラス</div>
-
-              <%# @NOTE 予約が未承認の場合のみ表示される %>
-              <div class="approval">
-                <button type="button" class="button -primary">
-                  予約を承認する
-                </button>
-              </div>
+              <% if (VIEW_MODE === 'man') { %>
+                <%# @NOTE 予約が未承認の場合のみ表示される %>
+                <div class="approval">
+                  <button type="button" class="button -primary">
+                    予約を承認する
+                  </button>
+                </div>
+              <% } %>
             </div>
           </a>
         <% } %>
