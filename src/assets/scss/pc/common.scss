@@ -27,6 +27,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: z(globalHeader);
 
   > .logo {
     margin-right: 20px;

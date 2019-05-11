@@ -32,7 +32,8 @@ $z-index:(
   // ↑ on the top
   modalClose,
   modal,
-  modalBackdrop
+  modalBackdrop,
+  globalHeader,
 );
 
 @function list-reverse($map) {
