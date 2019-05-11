@@ -432,6 +432,7 @@ $_ellipsisMenuButtonSize: 20px;
     color: $gray-dark;
     margin-right: 20px;
     border-bottom: 1px solid transparent;
+    position: relative;
 
     &:hover {
       color: $gray;
@@ -443,6 +444,12 @@ $_ellipsisMenuButtonSize: 20px;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    > .badge-round {
+      position: absolute;
+      top: -4px;
+      right: -4px;
     }
   }
 
