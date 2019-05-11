@@ -423,6 +423,35 @@ $_ellipsisMenuButtonSize: 20px;
   }
 }
 
+.tab-menu {
+  margin-bottom: 20px;
+  font-size: 16px;
+  display: flex;
+
+  > .item {
+    color: $gray-dark;
+    margin-right: 20px;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      color: $gray;
+    }
+
+    &:active {
+      color: $gray-light;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  > .item.-current {
+    color: $black;
+    border-bottom: 1px solid $pink;
+  }
+}
+
 // =================================================================
 // lessons
 // =================================================================
