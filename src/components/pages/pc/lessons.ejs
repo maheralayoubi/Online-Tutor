@@ -12,6 +12,12 @@
   <div class="global-main -with-inner-space">
     <div class="inner">
 
+      <div class="tab-menu">
+        <button type="button" class="item -current">予約一覧</button>
+        <button type="button" class="item">履歴</button>
+        <button type="button" class="item">リクエスト</button>
+      </div>
+
       <div class="lessons">
 
         <% for (var i = 0; i < 30; i++) { %>
@@ -25,6 +31,7 @@
               <div class="age"><%= profile.man.age %>才</div>
               <div class="content">英語の授業 2019年05月10日 18:00 ~ 20:00</div>
               <div class="tuitionfee">4,500円/クラス</div>
+
               <%# @NOTE 予約が未承認の場合のみ表示される %>
               <div class="approval">
                 <button type="button" class="button -primary">
