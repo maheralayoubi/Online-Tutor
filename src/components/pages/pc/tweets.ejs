@@ -10,9 +10,58 @@
 <div class="global-content">
   <% include common/_global_side %>
 
-  <div class="global-main">
+  <div class="global-main -with-inner-space -fill-bg-white">
+    <div class="tweet-button">
+      <button
+        type="button"
+        class="button -secondary-outline -block js-tweet-button"
+        data-target-modal-id="#modal-tweet">つぶやく</button>
+    </div>
+
+    <div class="tweet-row">
+      <div class="tweet-item">
+        <div class="balloon">
+          都内に通う女子高生です~
+          英語のクラス、4,000縁でどー？
+        </div>
+        <div class="meta">
+          <div class="time">2019年3月26日 12:30</div>
+          <div class="reply">返信<button type="button" class="num js-show-reply" data-target-modal-id="#modal-show-reply">9,876</button>件</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tweet-row">
+      <div class="tweet-item">
+        <div class="balloon">
+          今日の夜8時から、ヒマなんだよなー<br>
+          もし空いてる人がいたら一緒におしゃべりしたいかもしれないなー<br>
+          もしかしたら、サービスあるかもよ？<br>
+        </div>
+        <div class="meta">
+          <div class="time">2019年3月26日 9:30</div>
+          <div class="reply">返信<button type="button" class="num js-show-reply" data-target-modal-id="#modal-show-reply">9,876</button>件</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tweet-row">
+      <div class="tweet-item">
+        <div class="balloon">
+          今日の夜8時から、ヒマなんだよなー<br>
+          もし空いてる人がいたら一緒におしゃべりしたいかもしれないなー<br>
+          もしかしたら、サービスあるかもよ？<br>
+        </div>
+        <div class="meta">
+          <div class="time">2019年3月26日 9:30</div>
+          <div class="reply">返信<button type="button" class="num js-show-reply" data-target-modal-id="#modal-show-reply">9,876</button>件</div>
+        </div>
+      </div>
+    </div>
 
   </div>
 </div>
 
+<% include modules/_modal_tweet %>
+<% include modules/_modal_show_reply %>
 <% include common/_footer %>
