@@ -9,3 +9,11 @@
   background-color: $pink;
   line-height: 1;
 }
+
+.badge-round {
+  $_size: 6px;
+  background-color: $pink;
+  width: $_size;
+  height: $_size;
+  border-radius: 50%;
+}
