@@ -81,6 +81,10 @@
     padding: 32px 20px;
   }
 
+  &.-fill-bg-white {
+    background-color: $white;
+  }
+
   > .inner {
     max-width: 920px;
   }
@@ -749,6 +753,51 @@ $_messagePanelSpace: 24px;
     max-width: 200px;
     margin: auto;
     text-align: center;
+  }
+}
+
+
+// =================================================================
+// tweets
+// =================================================================
+
+.tweet-button {
+  max-width: 280px;
+  margin-bottom: 40px;
+}
+
+.tweet-row {
+  margin-bottom: 28px;
+
+  &:last-child {
+    margin-bottom: 28px;
+  }
+}
+
+.tweet-item {
+  display: inline-block;
+
+  > .content {
+
+  }
+
+  > .meta {
+    display: flex;
+    margin-top: 8px;
+    font-size: 12px;
+
+    > .time {
+
+    }
+
+    > .reply {
+      margin-left: auto;
+    }
+
+    > .reply > .num {
+      margin: 0 4px;
+      text-decoration: underline;
+    }
   }
 }
 
