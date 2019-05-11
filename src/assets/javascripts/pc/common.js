@@ -5,6 +5,16 @@ $showDetailedProfile  = $('.js-show-detailed-profile');
 $createClass          = $('.js-create-class');
 $modalClose           = $('.js-modal-close');
 $ellipsisMenuButton   = $('.js-ellipsis-menu-button')
+$tweetButton          = $('.js-tweet-button')
+$showReply            = $('.js-show-reply')
+
+$tweetButton.on('click', function () {
+  openModal(getTargetModalId($(this)));
+});
+
+$showReply.on('click', function () {
+  openModal(getTargetModalId($(this)));
+});
 
 $showDetailedProfile.on('click', function () {
   openModal(getTargetModalId($(this)));
