@@ -25,7 +25,10 @@
   }
 
   &.-arrow-right {
+    display: flex;
+    margin-bottom: 1rem;
     border-radius: 4px 0 4px 4px;
+    
 
     &:before {
       content: '';

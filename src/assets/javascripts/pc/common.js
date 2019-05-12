@@ -7,6 +7,8 @@ $modalClose           = $('.js-modal-close');
 $ellipsisMenuButton   = $('.js-ellipsis-menu-button')
 $tweetButton          = $('.js-tweet-button')
 $showReply            = $('.js-show-reply')
+$messageButton        = $('.js-message-button')
+
 
 $tweetButton.on('click', function () {
   openModal(getTargetModalId($(this)));
@@ -18,6 +20,14 @@ $showReply.on('click', function () {
 
 $showDetailedProfile.on('click', function () {
   openModal(getTargetModalId($(this)));
+});
+
+$messageButton.on('click', function () {
+  var message = $('textarea').val();
+  var old = $('#myMessage').html();
+  $('#myMessage').html(old + '<div class="balloon">' + message + '</div>');
+  $('textarea').val('').empty();
+  return false;
 });
 
 $createClass.on('click', function () {
