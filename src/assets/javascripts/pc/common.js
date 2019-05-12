@@ -9,7 +9,6 @@ $tweetButton          = $('.js-tweet-button')
 $showReply            = $('.js-show-reply')
 $messageButton        = $('.js-message-button')
 
-
 $tweetButton.on('click', function () {
   openModal(getTargetModalId($(this)));
 });
