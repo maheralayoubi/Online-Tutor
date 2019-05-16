@@ -8,6 +8,26 @@
       </div>
 
       <div class="modal-inner">
+
+        <% for (var i = 0; i < 5; i++) { %>
+          <div class="reply-item">
+            <div
+              style="background-image: url(<%= profile.man.avatar_path %>)"
+              class="avatar -size-small">
+            </div>
+            <div class="block">
+              <div class="header">
+                <div class="name"><%= profile.man.name %></div>
+                <a href="/pc/messages.html" class="action">チャットを開始する</a>
+              </div>
+              <div class="balloon -arrow-left">
+                はじめまして！じろーです！いまからお話しましょう！
+              </div>
+              <div class="timestamp">2019年3月29日 12:00</div>
+            </div>
+          </div>
+        <% } %>
+
       </div>
 
     </div>
