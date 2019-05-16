@@ -9,6 +9,7 @@
 // @see https://github.com/twbs/bootstrap/blob/master/scss/_modal.scss
 
 $_modalGap: 40px;
+$_modalGutter: 20px;
 
 // Kill the scroll on the body
 .modal-open {
@@ -133,9 +134,25 @@ $_modalGap: 40px;
 .modal-header {
   border-bottom: 1px solid $gray;
   text-align: center;
-  padding: 12px 0;
+  padding: 12px $_modalGutter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > .title {
+    margin: auto; // centering
+  }
+
+  // @TODO ピンク色で下線が付与されたデザインをコンポーネント化
+  > .action {
+    color: $pink;
+    font-weight: 700;
+    text-decoration: underline;
+  }
 }
 
 .modal-inner {
-  padding: 20px 20px 32px;
+  padding: 20px $_modalGutter 32px;
+  max-height: 480px;
+  overflow-y: auto;
 }
